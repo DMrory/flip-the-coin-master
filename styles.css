@@ -1,0 +1,197 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #1a192e; 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+.header-logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.header-logo img {
+    height: 18px; 
+}
+.card-container {
+    background-color: #363b58; 
+    border-radius: 15px; 
+    padding: 50px 70px; 
+    text-align: center;
+    width: 90%; 
+    max-width: 580px; 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    margin-top: 50px; 
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #bdbdd3; 
+    margin-bottom: 50px; 
+}
+
+.result-text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 30px; 
+    margin-bottom: 50px; 
+    color: #fff;
+}
+.coin-display {
+    perspective: 1000px; 
+    height: 150px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+.coin-face-image,
+.coin-shadow {
+    width: 150px; 
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.coin-face-image {
+    z-index: 2; 
+    transition: transform 0.5s ease-in-out; 
+}
+
+.coin-shadow {
+    z-index: 1; 
+}
+.flipping {
+    animation: coinFlip 1s ease-out forwards;
+}
+
+@keyframes coinFlip {
+    0% { transform: translateX(-50%) rotateY(0deg) scale(1); }
+    50% { transform: translateX(-50%) rotateY(1800deg) scale(1.1); } 
+    100% { transform: translateX(-50%) rotateY(3600deg) scale(1); }
+}
+.random-button {
+    background-color: #4A90E2; 
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.random-button:hover:not(:disabled) {
+    background-color: #3b7ad6; 
+}
+
+.random-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.author-info {
+    font-size: 0.8rem;
+    color: #bdbdd3;
+    text-align: center;
+    margin-top: 40px; 
+}
+
+.author-info a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+@media (max-width: 992px) {
+    .card-container {
+        max-width: 480px; 
+        padding: 40px 50px; 
+    }
+}
+@media (max-width: 576px) {
+    .card-container {
+        max-width: 350px; 
+        padding: 30px 40px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        margin-bottom: 30px;
+        font-size: 0.9rem;
+    }
+    
+    .coin-display,
+    .coin-face-image,
+    .coin-shadow {
+        height: 120px; 
+        width: 120px; 
+    }
+
+    .result-text {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .random-button {
+        padding: 10px 30px;
+    }
+}
+.score-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #4a5170; 
+}
+
+.score-container p {
+    font-size: 1.1rem;
+    color: #bdbdd3;
+    font-weight: 400;
+    margin: 0;
+}
+
+.score-container span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 5px;
+}
+@media (max-width: 576px) {
+    .score-container {
+        flex-direction: column; 
+        gap: 8px; 
+        margin-top: 25px;
+        padding-top: 15px;
+    }
+}

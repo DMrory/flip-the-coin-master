@@ -1,58 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip the coin | devChallenges.io</title>
     <link
       rel="icon"
       href="resources/favicon.ico"
       type="image/x-icon"
       sizes="96x96"
     />
-
-    <title>Flip the coin | devChallenges.io</title>
-
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        height: 100vh;
-      }
-
-      .author-info {
-        font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
-      }
-
-      .author-info a {
-        text-decoration: none;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- 
-
-    Flip a Coin Game
-    Press the coin or the button to flip the coin
-    Head
-    Tail
-    Random
-  
-    -->
-
-    <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
-      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
-        >devChallenges.io</a
-      >.
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-logo">
+        <a href="https://devchallenges.io" target="_blank">
+            <img src="images/favicon.ico" alt="devChallenges.io Logo">
+        </a>
     </div>
-  </body>
+
+    <div class="card-container wide-card">
+        <h1>Flip the coin</h1>
+        <p class="subtitle">Press the coin or the button to flip the coin</p>
+
+        <div class="coin-display" id="coin-display">
+            <img src="images/shadow.svg" alt="Coin Shadow" class="coin-shadow">
+            <img src="images/heads.svg" alt="Coin Head" class="coin-face-image" id="coin-image">
+        </div>
+
+        <p class="result-text" id="result-text">Head</p>
+
+        <button class="random-button" id="flip-button">RANDOM</button>
+        
+        <div class="score-container">
+            <p>Heads: <span id="heads-count">0</span></p>
+            <p>Tails: <span id="tails-count">0</span></p>
+        </div>
+        <div class="author-info">
+            Coded by <a href="#">Derrick Orori</a> | Challenge by
+            <a href="https://www.devchallenges.io?ref=challenge" target="_blank">devChallenges.io</a>.
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
 </html>
