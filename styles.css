@@ -29,6 +29,30 @@ body {
     height: 18px; 
 }
 .card-container {
+    /* Background Properties for Full Screen */
+    background-color: #363b58; /* The dark blue color from the card */
+    
+    /* Full Screen Coverage */
+    width: 100vw;   /* Viewport Width */
+    height: 100vh;  /* Viewport Height */
+    margin: 0;      /* Remove default body margin */
+    padding: 0;     /* Remove default body padding */
+    
+    /* Positioning and Layout (to center content inside) */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    
+    /* Box/Visual Properties */
+    box-shadow: none; /* Remove box-shadow as it's the background */
+    border-radius: 0; /* Remove border-radius for full screen */
+    
+    /* Other card-related styles (can be moved to a nested element) */
+    text-align: center; 
+    /* If you still have content like the coin/text, it will be centered. */
+}
+/**.card-container {
     background-color: #363b58; 
     border-radius: 15px; 
     padding: 50px 70px; 
@@ -37,7 +61,9 @@ body {
     max-width: 580px; 
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
     margin-top: 50px; 
-}
+    position: absolute;
+    
+}**/
 h1 {
     font-size: 2.5rem;
     font-weight: 600;
@@ -81,7 +107,6 @@ h1 {
     transition: transform 0.5s ease-in-out; 
 }
 
-/* Specific styles for the shadow */
 .coin-shadow {
     width: 120px; 
     height: 12px; 
@@ -94,17 +119,16 @@ h1 {
     animation: coinFlip 2s ease-out forwards;
 }
 
-/* Shadow animation when flipping (shrinks and fades as coin goes up) */
 .flipping .coin-shadow {
     animation: shadowShrink 2s ease-out forwards;
 }
 
 @keyframes coinFlip {
     0% { transform: translateX(-50%) translateY(0) rotateY(0deg) scale(1); }
-    /* Coin jumps up slightly */
+   
     25% { transform: translateX(-50%) translateY(-50px) rotateY(900deg) scale(1.05); } 
     75% { transform: translateX(-50%) translateY(-50px) rotateY(2700deg) scale(1.05); } 
-    /* Coin lands */
+    
     100% { transform: translateX(-50%) translateY(0) rotateY(3600deg) scale(1); }
 }
 
@@ -113,7 +137,7 @@ h1 {
         opacity: 0.33; 
         transform: translateX(-50%) scale(1);
     }
-    /* Shadow shrinks/fades as coin reaches peak height */
+
     25%, 75% { 
         opacity: 0.1; 
         transform: translateX(-50%) scale(0.5); 
@@ -150,7 +174,7 @@ h1 {
     font-size: 0.8rem;
     color: #bdbdd3;
     text-align: center;
-    /* Adjusted margin top since score is gone */
+  
     margin-top: 20px; 
 }
 
@@ -204,4 +228,3 @@ h1 {
         padding: 10px 30px;
     }
 }
-/* All score-related CSS removed */
