@@ -29,28 +29,19 @@ body {
     height: 18px; 
 }
 .card-container {
-    /* Background Properties for Full Screen */
-    background-color: #363b58; /* The dark blue color from the card */
     
-    /* Full Screen Coverage */
-    width: 100vw;   /* Viewport Width */
-    height: 100vh;  /* Viewport Height */
-    margin: 0;      /* Remove default body margin */
-    padding: 0;     /* Remove default body padding */
-    
-    /* Positioning and Layout (to center content inside) */
-    display: flex; /* Use flexbox to center content */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    
-    /* Box/Visual Properties */
-    box-shadow: none; /* Remove box-shadow as it's the background */
-    border-radius: 0; /* Remove border-radius for full screen */
-    
-    /* Other card-related styles (can be moved to a nested element) */
+    background-color: #363b58;
+    width: 100vw;   
+    height: 100vh; 
+    margin: 0;      
+    padding: 0;     
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: none; 
+    border-radius: 0; 
     text-align: center; 
-    /* If you still have content like the coin/text, it will be centered. */
 }
 /**.card-container {
     background-color: #363b58; 
